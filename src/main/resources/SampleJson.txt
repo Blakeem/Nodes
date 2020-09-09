@@ -1,0 +1,86 @@
+{
+	"name":"Products",
+	"childNodes":[{
+		"name":"Electronics",
+		"childNodes": [
+			{
+				"name":"Computers"
+			},
+			{
+				"name":"Phones"
+			},
+			{
+				"name":"TV"
+			}
+		]
+	},
+	{
+		"name":"Home",
+		"childNodes": [
+			{
+				"name":"Houseware"
+			},
+			{
+				"name":"Tools"
+			},
+			{
+				"name":"Furniture"
+			}
+		]
+	},
+	{
+		"name":"Clothing",
+		"childNodes": [
+			{
+				"name":"Shirts"
+			},
+			{
+				"name":"Pants"
+			},
+			{
+				"name":"Shoes"
+			}
+		]
+	}]
+}
+
+
+
+{
+	"name":"CEO",
+	"childNodes":[{
+		"name":"Director of engineering",
+		"childNodes": [
+			{
+				"name":"Senior engineer"
+			},
+			{
+				"name":"QA engineer"
+			},
+			{
+				"name":"Dev ops engineer"
+			}
+		]
+	},
+	{
+		"name":"Director of sales",
+		"childNodes": [
+			{
+				"name":"Sales manager",
+				"childNodes": [
+					{
+						"name":"Sales associate"
+					}
+				]
+			}
+		]
+	},
+	{
+		"name":"Director of marketing",
+		"childNodes": [
+			{
+				"name":"Marketing manager"
+			}
+		]
+	}]
+}
