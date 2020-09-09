@@ -8,38 +8,38 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class NodeService {
-    private NodeDataAccessService nodeDataAccessService;
+    private NodeDataAccessRepository nodeDataAccessRepository;
 
     @Autowired
-    public NodeService(NodeDataAccessService nodeDataAccessService) {
-        this.nodeDataAccessService = nodeDataAccessService;
+    public NodeService(NodeDataAccessRepository nodeDataAccessRepository) {
+        this.nodeDataAccessRepository = nodeDataAccessRepository;
     }
     
     public NodeService() {
 	}
 
 	List<Node> getAllNodes() {
-        return nodeDataAccessService.selectAllNodes();
+        return nodeDataAccessRepository.selectAllNodes();
     }
     
     List<Node> getNode(Integer id) {
-        return nodeDataAccessService.selectNode(id);
+        return nodeDataAccessRepository.selectNode(id);
     }
 
     Integer addNode(Node node) {
-        return nodeDataAccessService.insertNode(node);
+        return nodeDataAccessRepository.insertNode(node);
     }
 
     public boolean removeNode(Integer id) {
-        return nodeDataAccessService.deleteNode(id);
+        return nodeDataAccessRepository.deleteNode(id);
     }
 
     public boolean nodeExists(Integer id) {
-        return nodeDataAccessService.isNode(id);
+        return nodeDataAccessRepository.isNode(id);
     }
 
     public boolean nodeExists(String name, Integer parent) {
-        return nodeDataAccessService.isNode(name, parent);
+        return nodeDataAccessRepository.isNode(name, parent);
     }
 
 }

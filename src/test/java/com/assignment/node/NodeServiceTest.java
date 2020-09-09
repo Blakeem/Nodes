@@ -18,7 +18,7 @@ public class NodeServiceTest {
     @Test
     public void testNodeService() {
         DataSource dataSource = new EmbeddedDatabaseBuilder().setType(EmbeddedDatabaseType.H2).addScript("classpath:jdbc/node.sql").build();
-        NodeService nodeService = new NodeService(new NodeDataAccessService(new JdbcTemplate(dataSource)));
+        NodeService nodeService = new NodeService(new NodeDataAccessRepository(new JdbcTemplate(dataSource)));
         // Create Node
         Integer resultId = nodeService.addNode(new Node(null, "test-node", null, null));
         assertTrue(resultId > 0);
